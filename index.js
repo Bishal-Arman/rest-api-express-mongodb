@@ -5,7 +5,7 @@ const bodyParser=require("body-parser");
 const port=process.env.PORT || 4000;
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/productCollections",{ useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
+mongoose.connect("mongodb://127.0.0.1:27017/productCollections").then(()=>{
     console.log("mongodb connected successfully");
 }).catch((err)=>{
     console.log(err);
