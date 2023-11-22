@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const mongoose=require("mongoose");
 const bodyParser=require("body-parser");
-
+const port=process.env.PORT || 4000;
 
 
 mongoose.connect("mongodb://127.0.0.1:27017/productCollections").then(()=>{
@@ -105,6 +105,6 @@ app.post("/product/new", async (req, res) => {
     }
   });
   
-app.listen(4000,()=>{
-    console.log("Server is running");
+app.listen(port,()=>{
+    console.log(`Server is running on ${port}`);
 })
